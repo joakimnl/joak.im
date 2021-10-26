@@ -6,39 +6,37 @@
         <meta name="description" content="Jeg har internett og min epostadresse er hei@joak.im">
         <title>Joakim Næss Lea</title>
         <style>
-            @font-face {
-                font-family: "SF Mono";
-                src: url("fonts/sfmono-medium-webfont.woff2") format("woff2"),
-                    url("fonts/sfmono-medium-webfont.woff") format("woff");
-                font-weight: normal;
-                font-style: normal;
-            }
             * { 
                 box-sizing: border-box;
                 margin: 0; 
             }
             html {
-                background: #fff;
+                background: #fffcf9;
                 color: #333;
-                font-family: "SF Mono", monospace;
+                font: normal 62.5%/1 sans-serif, monospace;
                 min-height: 100vh;
             }
             body {
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                background-color: #fff;
+                background-image: radial-gradient(closest-corner at 2px 2px, #E9DDD1 1.5px, #fffcf9 1.5px);
+                background-size: 1.5rem 1.5rem;
+                display: grid;
+                place-content: center;
                 min-height: 100vh;
                 padding: 2rem;
                 text-align: center;
             }
-            h1 { 
-                font-size: 1rem; 
-                font-weight: normal;
-                margin: 0 0 0.25rem;
+            section { 
+            }
+            h1 {
+                font-size: 3.2rem;
+                padding: 1rem;
             }
             a {
-                color: orangered;
-                text-decoration: none;
+                color: forestgreen;
+                font-size: 2rem;
+                text-decoration: underline;
+                text-decoration-thickness: 2px;
             }
         </style>
     </head>
