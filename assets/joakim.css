@@ -5,6 +5,7 @@
         url("/assets/fonts/Irregardless-BlackItalic.woff2") format("woff2");
     font-weight: 900;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
@@ -14,6 +15,7 @@
         url("/assets/fonts/Irregardless-BoldItalic.woff2") format("woff2");
     font-weight: 700;
     font-style: italic;
+    font-display: swap;
 }
 
 *,
@@ -23,6 +25,7 @@
 }
 
 html {
+    --color-dark: #222;
     --color-chili: #f34900;
     --color-verylightred: #fffcfa;
     --color-imblue: oklch(64.42% 0.17 247.926);
@@ -44,6 +47,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     background: var(--bg-color);
+    color: var(--color-dark);
     display: grid;
     gap: 2rem;
     font:
@@ -60,12 +64,9 @@ body {
 }
 
 a:link {
-    color: var(--color-imblue);
+    color: #db3300;
     font-weight: bold;
-}
-
-a:visited {
-    color: var(--color-chili);
+    text-decoration-thickness: 2px;
 }
 
 img {
