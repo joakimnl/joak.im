@@ -63,9 +63,14 @@ body {
     grid-template-rows: [full-start top-start] auto [content-start top-end] 1fr [content-end full-end];
 }
 
-a:link {
-    color: #db3300;
-    font-weight: bold;
+a {
+    color: #118600;
+    font-weight: 600;
+    text-decoration-thickness: 1px;
+    transition: all 100ms ease-in;
+}
+a:hover {
+    color: var(--color-chili);
     text-decoration-thickness: 2px;
 }
 
