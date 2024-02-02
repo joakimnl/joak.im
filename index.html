@@ -19,17 +19,19 @@
         />
         <link rel="stylesheet" href="assets/joakim.css" />
         <title>Joakim Næss Lea</title>
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo.png" />
+        <link rel="icon" href="/assets/icon.png" type="image/png" />
         <meta name="description" content="Jeg har internett og min epostadresse er hei@joak.im" />
     </head>
 
     <body>
         <header>
             <picture id="avatar">
-                <source srcset="/assets/joakim-næss-lea.avif" type="image/avif" />
-                <source srcset="/assets/joakim-næss-lea.webp" type="image/webp" />
                 <img
-                    src="/assets/joakim-næss-lea.jpeg"
+                    srcset="
+                        /assets/joakim-næss-lea-200px.jpeg,
+                        /assets/joakim-næss-lea-400px.jpeg 2x
+                    "
+                    src="/assets/joakim-næss-lea-400px.jpeg"
                     height="200"
                     width="200"
                     alt="Et portrett av Joakim Næss Lea. En flott herremann med skjegg, i følge ham selv."
