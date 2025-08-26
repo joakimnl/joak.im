@@ -98,9 +98,10 @@ main > * + * {
 }
 
 html::after {
-  content: "hei";
+  content: "2025";
   display: block;
-  margin-top: 90vh;
+  font-size: 75%;
+  margin-block: 2em;
   text-align: center;
-  color: #fff;
+  color: rgb(255 255 255 / 0.75);
 }
