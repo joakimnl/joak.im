@@ -65,8 +65,8 @@ main {
 
 a {
   color: var(--ac);
-  text-underline-offset: 0.2lh;
-  text-decoration-thickness: 0.075lh;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 0.1em;
 }
 
 h1 {
@@ -95,4 +95,12 @@ img {
 }
 main > * + * {
   margin-top: 1.5rlh;
+}
+
+html::after {
+  content: "hei";
+  display: block;
+  margin-top: 90vh;
+  text-align: center;
+  color: #fff;
 }
