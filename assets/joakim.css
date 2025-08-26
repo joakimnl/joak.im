@@ -98,10 +98,7 @@ main > * + * {
 }
 
 html::after {
-  content: "2025";
+  content: "";
   display: block;
-  font-size: 75%;
-  margin-block: 2em;
-  text-align: center;
-  color: rgb(255 255 255 / 0.75);
+  height: 2em;
 }
