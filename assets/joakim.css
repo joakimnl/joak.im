@@ -49,6 +49,7 @@ html {
 }
 body {
   background: #fff;
+  box-shadow: inset 0 0 1em 0 rgb(0 0 0 / 20%);
   border: 3px solid var(--ac);
   border-radius: 2.5em;
   display: grid;
@@ -57,9 +58,8 @@ body {
   padding: 2em;
 }
 
-main {
+main > * {
   margin-inline: auto;
-  max-width: 650px;
   text-align: center;
 }
 
@@ -87,18 +87,12 @@ img {
   margin-inline: auto;
   max-width: 200px;
   width: 100%;
-  border-radius: 1.5em;
 }
 
 #intro {
   font-size: 125%;
+  max-width: 55ch;
 }
 main > * + * {
   margin-top: 1.5rlh;
-}
-
-html::after {
-  content: "";
-  display: block;
-  height: 2em;
 }
