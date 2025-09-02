@@ -49,9 +49,11 @@ main {
 }
 
 a {
-  color: var(--ac);
-  text-underline-offset: 0.2em;
+  color: var(--tc);
   text-decoration-thickness: 0.1em;
+}
+a:hover {
+  text-decoration-color: var(--ac);
 }
 
 h1 {
@@ -62,20 +64,36 @@ h1 {
   hyphens: manual;
 }
 
-img {
+picture {
   border-radius: 100%;
-  display: block;
-  height: auto;
-  margin-inline: auto;
-  max-width: 50px;
+  outline: 3px solid var(--ac);
+  outline-offset: 1px;
+  overflow: hidden;
   position: absolute;
   top: 1em;
   right: 1em;
   transition: all 0.3s ease-out;
+  user-select: none;
 }
-img:hover {
-  max-width: 150px;
-  cursor: crosshair;
+img {
+  display: block;
+  filter: grayscale(1);
+  height: auto;
+  transition: all 0.3s ease-out;
+}
+picture:hover {
+  cursor: pointer;
+  outline-offset: 3px;
+  outline-width: 6px;
+  rotate: 10deg;
+}
+picture:hover img {
+  filter: grayscale(0);
+  width: 150px;
+}
+
+picture:active {
+  rotate: 360deg;
 }
 
 #intro {

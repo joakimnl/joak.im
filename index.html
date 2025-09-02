@@ -20,17 +20,24 @@
         Web.
       </p>
       <p>Dette er hjemmesiden min, min digitale hage. Her kan alt skje! Eller ingenting, som nå.</p>
-      <p>
+      <p id="kontakt"">
         Tast <a href="tel:+4747311422">47 31 14 22</a> eller
         <a href="mailto:hei@joak.im">hei@joak.im</a>, hvis du vil chatte.
       </p>
-      <img
-        srcset="/assets/joakim-200px.webp, /assets/joakim-400px.webp 2x"
-        src="/assets/joakim-400px.webp"
-        height="150"
-        width="150"
-        alt="Et portrett av Joakim Næss Lea. En flott herremann med skjegg, i følge ham selv."
-      />
+      <picture>
+        <img
+            srcset="
+                /assets/joakim-200px.webp,
+                /assets/joakim-400px.webp 2x
+            "
+            src="/assets/joakim-400px.webp.jpeg"
+            height="50"
+            width="50"
+            alt="Et portrett av Joakim Næss Lea. En flott herremann med skjegg, i følge ham selv."
+            draggable="false"
+        />
+        <audio src="assets/scratch.mp3" preload="auto" />
+    </picture>
     </main>
     <svg xmlns="http://www.w3.org/2000/svg" height="0" width="0">
       <filter id="pixelate" x="0" y="0">
@@ -42,5 +49,14 @@
         <feMorphology operator="erode" radius="1" />
       </filter>
     </svg>
+    <script>
+    const audio = document.querySelector("audio");
+    const avatar = document.querySelector("picture");
+    avatar.addEventListener("mousedown", (event) => {
+      audio.pause();
+      audio.currentTime = 0;
+      audio.play();
+    });
+    </script>
   </body>
 </html>
