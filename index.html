@@ -13,7 +13,23 @@
 
   <body>
     <main>
-      <h1>Hei!</h1>
+      <h1>
+        <span>Hei!</span>
+        <picture>
+          <img
+              srcset="
+                  /assets/joakim-200px.webp,
+                  /assets/joakim-400px.webp 2x
+              "
+              src="/assets/joakim-400px.webp.jpeg"
+              height="50"
+              width="50"
+              alt="Profilbilde av Joakim. Smilende 40 år gammel mann med mørkt hår og skjegg."
+              draggable="false"
+          />
+          <audio src="assets/scratch.mp3" preload="auto" />
+      </picture>
+      </h1>
 
       <p id="intro">
         Jeg heter Joakim og digger design, teknologi og the World Wide Web.
@@ -23,20 +39,7 @@
         Tast <a href="tel:+4747311422">47 31 14 22</a> eller
         <a href="mailto:hei@joak.im">hei@joak.im</a>, hvis du vil chatte.
       </p>
-      <picture>
-        <img
-            srcset="
-                /assets/joakim-200px.webp,
-                /assets/joakim-400px.webp 2x
-            "
-            src="/assets/joakim-400px.webp.jpeg"
-            height="50"
-            width="50"
-            alt="Profilbilde av Joakim. Smilende 40 år gammel mann med mørkt hår og skjegg."
-            draggable="false"
-        />
-        <audio src="assets/scratch.mp3" preload="auto" />
-    </picture>
+
     </main>
     <div id="particles-js"></div>
     <script src="assets/particles.min.js"></script>

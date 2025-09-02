@@ -30,7 +30,7 @@ html {
   background: var(--bc);
   color: var(--tc);
   font:
-    normal clamp(1rem, 0.6667rem + 1.4222vw, 2rem) / 1.5 Silkscreen,
+    normal clamp(1.25rem, 0.7081rem + 2.3121vw, 2.5rem) / 1.5 Silkscreen,
     ui-monospace,
     monospace;
   font-synthesis: none;
@@ -45,7 +45,7 @@ body {
 main {
   display: grid;
   gap: 1lh;
-  padding: 1.5rlh;
+  padding: 1rlh;
   place-content: center;
   max-width: 35rem;
 }
@@ -60,36 +60,38 @@ a:hover {
 
 h1 {
   color: var(--ac);
-  font: normal clamp(3rem, 1.9167rem + 4.6222vw, 6.25rem) / 0.8 Silkscreen;
+  font: normal clamp(3.75rem, 1.9888rem + 7.5145vw, 7.8125rem) / 1 Silkscreen;
   letter-spacing: -0.15em;
 }
 
 picture {
   border-radius: 100%;
-  outline: 3px solid var(--ac);
-  outline-offset: 1px;
+  outline: 0.05em solid var(--ac);
+  outline-offset: 0.015em;
   overflow: hidden;
   position: absolute;
-  top: 1.5rlh;
-  right: 1.5rlh;
+  top: 1rlh;
+  right: 1rlh;
   transition: all 0.3s ease-out;
   user-select: none;
 }
 img {
   display: block;
   filter: grayscale(1);
-  height: auto;
+  height: 0.8em;
+  width: 0.8em;
   transition: all 0.3s ease-out;
 }
 picture:hover {
   cursor: pointer;
-  outline-offset: 3px;
-  outline-width: 6px;
+  outline-offset: 0.03em;
+  outline-width: 0.075em;
   rotate: 10deg;
 }
 picture:hover img {
   filter: grayscale(0);
-  width: 150px;
+  height: 1.5em;
+  width: 1.5em;
 }
 
 picture.active {
