@@ -44,8 +44,10 @@ body {
 
 main {
   display: grid;
-  gap: 1.5lh;
-  padding: 1lh;
+  gap: 1lh;
+  padding: 1.5rlh;
+  place-content: center;
+  max-width: 35rem;
 }
 
 a {
@@ -59,9 +61,7 @@ a:hover {
 h1 {
   color: var(--ac);
   font: normal clamp(3rem, 1.9167rem + 4.6222vw, 6.25rem) / 0.8 Silkscreen;
-  max-width: 11ch;
-  overflow-wrap: break-word;
-  hyphens: manual;
+  letter-spacing: -0.15em;
 }
 
 picture {
@@ -70,8 +70,8 @@ picture {
   outline-offset: 1px;
   overflow: hidden;
   position: absolute;
-  top: 1em;
-  right: 1em;
+  top: 1.5rlh;
+  right: 1.5rlh;
   transition: all 0.3s ease-out;
   user-select: none;
 }
@@ -98,9 +98,18 @@ picture:active {
 
 #intro {
   font-size: 1.25em;
-  max-width: 45ch;
 }
 
-p:not(#intro) {
-  max-width: 48ch;
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
