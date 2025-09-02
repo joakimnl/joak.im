@@ -33,22 +33,12 @@
             src="/assets/joakim-400px.webp.jpeg"
             height="50"
             width="50"
-            alt="Et portrett av Joakim Næss Lea. En flott herremann med skjegg, i følge ham selv."
+            alt="Profilbilde av Joakim. Smilende 40 år gammel mann med mørkt hår og skjegg."
             draggable="false"
         />
         <audio src="assets/scratch.mp3" preload="auto" />
     </picture>
     </main>
-    <svg xmlns="http://www.w3.org/2000/svg" height="0" width="0">
-      <filter id="pixelate" x="0" y="0">
-        <feFlood x="4" y="4" height="1" width="1" />
-        <feComposite width="4" height="4" />
-        <feTile result="tiles" />
-        <feComposite in="SourceGraphic" operator="in" />
-        <feMorphology operator="dilate" radius="1.5" />
-        <feMorphology operator="erode" radius="1" />
-      </filter>
-    </svg>
     <script>
     const audio = document.querySelector("audio");
     const avatar = document.querySelector("picture");
