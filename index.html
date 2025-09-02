@@ -12,23 +12,34 @@
 
   <body>
     <main>
-      <h1>Hei og velkommen!</h1>
+      <h1>Hei og vel&shy;kommen!</h1>
+
+      <p id="intro">
+        Jeg heter <strong>Joakim Næss Lea</strong> og digger design, teknologi og the World Wide
+        Web.
+      </p>
+      <p>Dette er hjemmesiden min, min digitale hage. Her kan alt skje! Eller ingenting, som nå.</p>
+      <p>
+        Tast <a href="tel:+4747311422">47 31 14 22</a> eller
+        <a href="mailto:hei@joak.im">hei@joak.im</a>, hvis du vil chatte.
+      </p>
       <img
         srcset="/assets/joakim-200px.webp, /assets/joakim-400px.webp 2x"
         src="/assets/joakim-400px.webp"
-        height="200"
-        width="200"
+        height="150"
+        width="150"
         alt="Et portrett av Joakim Næss Lea. En flott herremann med skjegg, i følge ham selv."
       />
-      <p id="intro">
-        Jeg heter <strong>Joakim Næss Lea</strong> og digger design, teknologi og the World Wide
-        Web. Dette er hjemmesiden min – min digitale hage. Her kan alt skje, eller ingenting. Sånn
-        som nå.
-      </p>
-      <p>
-        Send SMS til <a href="tel:+4747311422">47 31 14 22</a> eller epost til
-        <a href="mailto:hei@joak.im">hei@joak.im</a> hvis du vil chatte.
-      </p>
     </main>
+    <svg xmlns="http://www.w3.org/2000/svg" height="0" width="0">
+      <filter id="pixelate" x="0" y="0">
+        <feFlood x="4" y="4" height="1" width="1" />
+        <feComposite width="4" height="4" />
+        <feTile result="tiles" />
+        <feComposite in="SourceGraphic" operator="in" />
+        <feMorphology operator="dilate" radius="1.5" />
+        <feMorphology operator="erode" radius="1" />
+      </filter>
+    </svg>
   </body>
 </html>
