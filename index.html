@@ -16,7 +16,7 @@
       <h1>Hei!</h1>
 
       <p id="intro">
-        Jeg heter Joakim og digger design, teknologi og the World Wide Web.
+        Jeg heter Joakim og digger design, teknologi og <span aria-hidden="true">{</span>the World Wide Web<span aria-hidden="true">}</span>.
       </p>
       <p>Dette er min hjemmeside, min digitale hage. Her kan alt skje. Eller ingenting, som nå.</p>
       <p id="kontakt"">
@@ -24,7 +24,7 @@
         <a href="mailto:hei@joak.im">hei@joak.im</a>, hvis du vil chatte.
       </p>
 
-      <button id="avatar">
+      <button id="avatar" tabindex="0">
         <img
             srcset="
                 /assets/joakim-200px.webp,
@@ -40,7 +40,7 @@
     </button>
 
     </main>
-    <div id="particles-js"></div>
+    <div id="particles-js" aria-hidden="true"></div>
     <script src="assets/particles.min.js"></script>
     <script>
     particlesJS.load('particles-js', 'assets/particles.json');

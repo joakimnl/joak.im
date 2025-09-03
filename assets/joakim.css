@@ -88,13 +88,15 @@ img {
   pointer-events: none;
   user-select: none;
 }
-#avatar:hover {
+#avatar:hover,
+#avatar:focus-visible {
   cursor: pointer;
   outline: 0.2em solid var(--ac);
   outline-offset: 0.1em;
   rotate: 10deg;
 }
-#avatar:hover img {
+#avatar:hover img,
+#avatar:focus-visible img {
   filter: grayscale(0);
   height: 6em;
   width: 6em;
@@ -106,6 +108,10 @@ img {
 
 #intro {
   font-size: 125%;
+}
+
+#intro span {
+  color: var(--ac);
 }
 
 canvas {
