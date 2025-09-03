@@ -13,23 +13,7 @@
 
   <body>
     <main>
-      <h1>
-        <span>Hei!</span>
-        <picture>
-          <img
-              srcset="
-                  /assets/joakim-200px.webp,
-                  /assets/joakim-400px.webp 2x
-              "
-              src="/assets/joakim-400px.webp.jpeg"
-              height="50"
-              width="50"
-              alt="Profilbilde av Joakim. Smilende 40 år gammel mann med mørkt hår og skjegg."
-              draggable="false"
-          />
-          <audio src="assets/scratch.mp3" preload="auto" />
-      </picture>
-      </h1>
+      <h1>Hei!</h1>
 
       <p id="intro">
         Jeg heter Joakim og digger design, teknologi og the World Wide Web.
@@ -40,21 +24,32 @@
         <a href="mailto:hei@joak.im">hei@joak.im</a>, hvis du vil chatte.
       </p>
 
+      <button id="avatar">
+        <img
+            srcset="
+                /assets/joakim-200px.webp,
+                /assets/joakim-400px.webp 2x
+            "
+            src="/assets/joakim-400px.webp.jpeg"
+            height="50"
+            width="50"
+            alt="Profilbilde av Joakim. Smilende 40 år gammel mann med mørkt hår og skjegg."
+            draggable="false"
+        />
+        <audio src="assets/scratch.mp3" preload="auto" />
+    </button>
+
     </main>
     <div id="particles-js"></div>
     <script src="assets/particles.min.js"></script>
     <script>
     particlesJS.load('particles-js', 'assets/particles.json');
     const audio = document.querySelector("audio");
-    const avatar = document.querySelector("picture");
-    avatar.addEventListener("mousedown", (e) => {
-      avatar.classList.add("active");
+    const avatar = document.querySelector("#avatar");
+
+    avatar.addEventListener("pointerdown", (e) => {
       audio.play();
       audio.currentTime = 0;
-    });
-    avatar.addEventListener("mouseup", (e) => {
-      avatar.classList.remove("active");
-      audio.pause();
     });
     </script>
   </body>

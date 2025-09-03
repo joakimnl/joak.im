@@ -64,42 +64,47 @@ h1 {
   letter-spacing: -0.15em;
 }
 
-picture {
+#avatar {
+  all: unset;
+  appearance: none;
   border-radius: 100%;
-  outline: 0.05em solid var(--ac);
-  outline-offset: 0.015em;
+  outline: 0.05rem dotted var(--ac);
+  outline-offset: 0.1rem;
   overflow: hidden;
   position: absolute;
   top: 1rlh;
   right: 1rlh;
   transition: all 0.3s ease-out;
+  transition-property: outline, rotate;
   user-select: none;
 }
 img {
   display: block;
   filter: grayscale(1);
-  height: 0.8em;
-  width: 0.8em;
+  height: 2.5rem;
+  width: 2.5rem;
   transition: all 0.3s ease-out;
+  transition-property: height, width, filter;
+  pointer-events: none;
 }
-picture:hover {
+#avatar:hover {
   cursor: pointer;
-  outline-offset: 0.03em;
-  outline-width: 0.075em;
+  outline: 0.2rem solid var(--ac);
+  outline-offset: 0.1rem;
   rotate: 10deg;
 }
-picture:hover img {
+#avatar:hover img {
   filter: grayscale(0);
-  height: 1.5em;
-  width: 1.5em;
+  height: 6rem;
+  width: 6rem;
 }
 
-picture.active {
+#avatar:active {
   rotate: 360deg;
 }
 
 #intro {
-  font-size: 1.25em;
+  font-size: 125%;
 }
 
 canvas {
