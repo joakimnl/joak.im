@@ -47,8 +47,15 @@
     const audio = document.querySelector("audio");
     const avatar = document.querySelector("#avatar");
 
+    const audioContext = new AudioContext();
+    const track = audioContext.createMediaElementSource(audio);
+    track.connect(audioContext.destination);
+
     avatar.addEventListener("pointerdown", (e) => {
       audio.play();
+    });
+    avatar.addEventListener("pointerup", (e) => {
+      audio.pause();
       audio.currentTime = 0;
     });
     </script>

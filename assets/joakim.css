@@ -86,6 +86,7 @@ img {
   transition: all 0.3s ease-out;
   transition-property: height, width, filter;
   pointer-events: none;
+  user-select: none;
 }
 #avatar:hover {
   cursor: pointer;
