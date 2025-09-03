@@ -29,15 +29,15 @@ html {
   --tc: #623722;
   background: var(--bc);
   color: var(--tc);
+}
+
+body {
+  display: grid;
   font:
     normal clamp(1.25rem, 0.7081rem + 2.3121vw, 2.5rem) / 1.5 Silkscreen,
     ui-monospace,
     monospace;
   font-synthesis: none;
-}
-
-body {
-  display: grid;
   place-content: center;
   min-height: 100dvh;
 }
@@ -47,7 +47,7 @@ main {
   gap: 1lh;
   padding: 1rlh;
   place-content: center;
-  max-width: 35rem;
+  max-width: 75rem;
 }
 
 a {
@@ -68,12 +68,12 @@ h1 {
   all: unset;
   appearance: none;
   border-radius: 100%;
-  outline: 0.05rem dotted var(--ac);
-  outline-offset: 0.1rem;
+  outline: 0.05em dotted var(--ac);
+  outline-offset: 0.1em;
   overflow: hidden;
   position: absolute;
-  top: 1rlh;
-  right: 1rlh;
+  top: 1lh;
+  right: 1lh;
   transition: all 0.3s ease-out;
   transition-property: outline, rotate;
   user-select: none;
@@ -81,8 +81,8 @@ h1 {
 img {
   display: block;
   filter: grayscale(1);
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 2.5em;
+  width: 2.5em;
   transition: all 0.3s ease-out;
   transition-property: height, width, filter;
   pointer-events: none;
@@ -90,14 +90,14 @@ img {
 }
 #avatar:hover {
   cursor: pointer;
-  outline: 0.2rem solid var(--ac);
-  outline-offset: 0.1rem;
+  outline: 0.2em solid var(--ac);
+  outline-offset: 0.1em;
   rotate: 10deg;
 }
 #avatar:hover img {
   filter: grayscale(0);
-  height: 6rem;
-  width: 6rem;
+  height: 6em;
+  width: 6em;
 }
 
 #avatar:active {
