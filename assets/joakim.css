@@ -53,6 +53,9 @@ main {
 a {
   color: var(--tc);
   text-decoration-thickness: 0.1em;
+  text-decoration-style: dotted;
+  text-underline-offset: 0.2em;
+  text-decoration-color: var(--ac);
 }
 a:hover {
   text-decoration-color: var(--ac);
@@ -93,7 +96,7 @@ img {
   cursor: pointer;
   outline: 0.2em solid var(--ac);
   outline-offset: 0.1em;
-  rotate: 10deg;
+  rotate: 15deg;
 }
 #avatar:hover img,
 #avatar:focus-visible img {

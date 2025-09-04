@@ -51,12 +51,17 @@
     const track = audioContext.createMediaElementSource(audio);
     track.connect(audioContext.destination);
 
-    avatar.addEventListener("pointerdown", (e) => {
+    avatar.addEventListener("pointerover", (e) => {
+      audio.currentTime = 0.3;
       audio.play();
     });
-    avatar.addEventListener("pointerup", (e) => {
+    avatar.addEventListener("pointerout, pointerup", (e) => {
       audio.pause();
       audio.currentTime = 0;
+    });
+    avatar.addEventListener("pointerdown", (e) => {
+      audio.currentTime = 0;
+      audio.play();
     });
     </script>
   </body>
