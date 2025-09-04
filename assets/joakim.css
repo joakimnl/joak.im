@@ -80,6 +80,7 @@ h1 {
   transition: all 0.3s ease-out;
   transition-property: outline, rotate;
   user-select: none;
+  rotate: 360deg;
 }
 img {
   display: block;
@@ -106,7 +107,7 @@ img {
 }
 
 #avatar:active {
-  rotate: 360deg;
+  rotate: 375deg;
 }
 
 #intro {
