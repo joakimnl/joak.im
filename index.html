@@ -36,7 +36,6 @@
             alt="Profilbilde av Joakim. Smilende 40 år gammel mann med mørkt hår og skjegg."
             draggable="false"
         />
-        <audio src="assets/scratch.mp3" preload="auto" aria-hidden="true" />
     </button>
 
     </main>
@@ -44,15 +43,12 @@
     <script src="assets/particles.min.js"></script>
     <script>
     particlesJS.load('particles-js', 'assets/particles.json');
-    const audio = document.querySelector("audio");
+
     const avatar = document.querySelector("#avatar");
 
-    const audioContext = new AudioContext();
-    const track = audioContext.createMediaElementSource(audio);
-    track.connect(audioContext.destination);
+    const audio = new Audio("./assets/scratch.mp3");
 
     avatar.addEventListener("pointerdown", (e) => {
-      audio.currentTime = 0;
       audio.play();
     });
     avatar.addEventListener("pointerup", (e) => {
